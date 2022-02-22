@@ -1,0 +1,45 @@
+p1.
+
+"""
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+i.e.
+friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+Note: keep the original order of the names in the output.
+"""
+def friend(friend1, friend2, friend3, friend4) -> list:
+    Friendlist = []
+    Truelist = []
+    
+    Friendlist.append(friend1)
+    Friendlist.append(friend2)
+    Friendlist.append(friend3)
+    Friendlist.append(friend4)
+    for elements in Friendlist:
+        if len(elements) == 4:
+            Truelist.append(elements)
+        else:
+            pass
+    return print(Truelist)
+
+friend("Ryan", "Kieran", "Jason", "Yous")
+
+"""
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+The output should be two capital letters with a dot separating them.
+It should look like this:
+Sam Harris => S.H
+patrick feeney => P.F
+"""
+
+def abbrev_name(name)-> str:
+    RealName = name.split()
+    EmptyStr= ""
+    for element in range(len(RealName)):
+        EmptyStr = EmptyStr + RealName[element][0].upper() + "."
+        
+    
+    return print(EmptyStr[:-1])
+
+abbrev_name("Mauricio Hernández")
